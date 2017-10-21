@@ -1,0 +1,33 @@
+img {
+    &.float-left {
+        margin: 0 1em 1em 0;
+    }
+    &.float-right {
+        margin: 0 0 1em 1em;
+    }
+}
+
+.margin {
+  &--top-1 { margin-top: 1em; }
+  &--bottom-1 { margin-bottom: 1em; }
+  &--vertical-1 {
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+}
+
+.padding {
+  &-1 {
+    padding: 1em;
+  }
+  &--top-1 { padding-top: 1em; }
+  &--bottom-1 { padding-bottom: 1em; }
+  &--vertical-1 {
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+  &--horizontal-1 {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+}
