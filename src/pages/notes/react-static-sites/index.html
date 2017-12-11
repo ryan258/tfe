@@ -1,0 +1,673 @@
+<div class="grid-container">
+  <div class="grid-x grid-margin-x">
+    <div class="cell medium-12">
+      <h1>LevelUpTuts - First Look at Gtasby</h1>
+      <h2>What is GatsbyJS?</h2>
+      <ul>
+        <li>A static site generator</li>
+        <li>that uses GraphQL</li>
+        <li>ReactJS</li>
+        <li>and Webpack</li>
+      </ul>
+      <h2>What Gatsby Does</h2>
+      <ul>
+        <li>Generates static HTML files</li>
+        <li>and a JS bundle</li>
+        <li>so your site can be both
+          <ul>
+            <li>dynamic</li>
+            <li>and static</li>
+          </ul>
+        </li>
+        <li>where you first download the initial HTML file
+          <ul>
+            <li>to get really fast loads</li>
+          </ul>
+        </li>
+        <li>then for any additional information such as pulling in from an api</li>
+        <li>you still have access to all that React power</li>
+        <li>all the while generating static site files</li>
+        <li>meaning you get html and js files you can throw in anywhere
+          <ul>
+            <li>makes hosting easy</li>
+            <li>no database to worry about</li>
+          </ul>
+        </li>
+        <li>makes blog posts easy because
+          <ul>
+            <li>you just write everything in markdown</li>
+            <li>then save it to a folder</li>
+            <li>then you can access that data using GraphQL query</li>
+          </ul>
+        </li>
+      </ul>
+      <h2>First Look</h2>
+      <ul>
+        <li>GatsbyJS - Serves a static page, then let's the app/JS part take over</li>
+        <li>doesn't include a backend or api, you have to bring those yourself</li>
+        <li>Install the Gatsby CLI
+          <code>npm install -g gatsby</code>
+        </li>
+        <li>the documentation is pretty incomplete</li>
+        <li>Generate a new gatsby site
+          <code>gatsby new gatsby-site</code>
+        </li>
+        <li>
+          <code>cd gatsby-site</code>
+        </li>
+        <li>Fire up the local hosting
+          <code>gatsby develop</code>
+        </li>
+        <li>Go to
+          <a href="http://localhost:8000">http://localhost:8000</a>
+        </li>
+        <li>GraphQL basically manages your data</li>
+      </ul>
+      <h3>Taking a look at the files</h3>
+      <ul>
+        <li>Comes w/ basic routing</li>
+        <li>gatsby-config.js for basic site configurations</li>
+        <li>public folder for static files</li>
+        <li>to the src folder
+          <ul>
+            <li>
+              html.js
+              <ul>
+                <li>grabbing our styles</li>
+                <li>our main html tag</li>
+                <li>meta content</li>
+                <li>some typography</li>
+                <li>{this.props.portBodyComponent}</li>
+                <li>pages/
+                  <ul>
+                    <li>
+                      <code>
+                        <!-- <Link to="/" /> -->
+                      </code> is a way to link pages together</li>
+                    <li>index.js
+                      <ul>
+                        <li>our home page</li>
+                      </ul>
+                    </li>
+                    <li>page2.js
+                      <ul>
+                        <li>see page generation in the docs</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li>layouts/
+                  <ul>
+                    <li>index.js
+                      <ul>
+                        <li>contains the header</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li>Let's try to make some posts
+                  <ul>
+                    <li>checkout the examples folder on the repo</li>
+                    <li>you can use it with Drupal</li>
+                    <li>you can use it with Redux</li>
+                    <li>you can use basic posts
+                      <ul>
+                        <li>see how Gatsby uses React Components</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="grid-container">
+  <div class="grid-x grid-margin-x">
+    <div class="cell medium-12">
+      <h1>Hatsby.js Tutorials #1 - Getting Started w/ Gatsby</h1>
+      <h2>Why not just use Jekyll?</h2>
+      <p>It's different flavors of the same kind of thing, it depends on Ruby and Gems... Gatsby is entirely node-based and
+        tied to React. Plus it uses all the new stuff!</p>
+      <p>We have several ways of getting data into Gatsby:</p>
+      <ul>
+        <li>CMS</li>
+        <li>Markdown files</li>
+        <li>Data - APIs, JSON, YML, etc that go into</li>
+        <li>(build happens)</li>
+        <li>GraphQL - </li>
+        <li>that results in HTML, CSS, and ReactJS</li>
+        <li>that is then DELOYED</li>
+        <li>to a static web host
+          <ul>
+            <li>Initial load is straight up HTML files</li>
+          </ul>
+        </li>
+      </ul>
+      <h2>Ok, let's get started</h2>
+      <p class="lead">See getting started guide</p>
+      <ol>
+        <li>Open your terminal</li>
+        <li>Install the CLI
+          <code>npm install --global gatsby-cli</code>
+        </li>
+        <li>Fire up a site
+          <code>gatsby new gatsbyLUT</code>
+        </li>
+        <li>Change into the new directory
+          <code>cd gatsbyLUT</code>
+        </li>
+        <li>Run development mode
+          <code>gatsby develop</code>
+        </li>
+        <li>Take a look at
+          <a href="http://localhost:8000">http://localhost:8000</a>
+        </li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+<div class="grid-container">
+  <div class="grid-x grid-margin-x">
+    <div class="cell medium-12">
+      <h1>Gatsby.js Tutorials #2 - Gatsby Files</h1>
+      <p class="lead">Find where things are!</p>
+      <ul>
+        <li>helmet deals with the metadata</li>
+      </ul>
+      <ul>
+        <li>Folders
+          <ul>
+            <li>.cache - just never touch</li>
+            <li>node_modules/ - where all our installed modules live</li>
+            <li>public/ - where your site is going to be generated into</li>
+            <li>src/ - where all our working files are, it's where we edit and work
+              <ul>
+                <li>layouts/ - main layout of your site
+                  <ul>
+                    <li>your global CSS</li>
+                    <li>index.js - with the header
+                      <ul>
+                        <li>hey, there's no routing file</li>
+                        <li>the page exists!</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li>pages/
+                  <ul>
+                    <li>make a pages/page-3.js</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>.gitignore - standard stuff</li>
+        <li>.gatsby-config - site configurations and what kinds of plugins we'll be using</li>
+        <li>package.json - has all your dependencies and scripts</li>
+        <li>so now you should be able to make new page files, update them with new content, and you have a working set of pages!
+          <ul>
+            <li>that and
+              <code>
+                <!-- <Link /> -->
+              </code> instead of
+              <!-- <a> -->
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="grid-container">
+  <div class="grid-x grid-margin-x">
+    <div class="cell medium-12">
+      <h1>Gatsby.js Tutorials #3 - Adding Plugins and Using Sass</h1>
+      <p class="lead">How to install plugins within Gatsby, like Sass!
+        <br>See
+        <a href="https://gatsbyjs.org/docs/plugins">Plugins</a>
+      </p>
+      <ul>
+        <li>As you can see they have a bunch of official plugins.</li>
+        <li>but we're going to be including gatsby-plugin-sass</li>
+      </ul>
+      <h3>Plug-in the Sass!</h3>
+      <ol>
+        <li>Pull the Sass plugin into node_modules/ and add to package.json's dependencies.
+          <code>npm install --save gatsby-plugin-sass</code>
+        </li>
+        <li>In the gatsby-config.js file we'll add to plugins array
+          <code>`gatsby-plugin-sass`</code>
+        </li>
+        <li>Change layouts/index.css to layouts/index.scss</li>
+        <li>Update the import './index.css' in layouts/index.js to './index.scss'</li>
+        <li>Re-run the server for it to take effect
+          <code>gatsby develop</code>
+        </li>
+      </ol>
+      <p class="lead">So hey,
+        <a href="">checkout the other plugins</a>.</p>
+    </div>
+  </div>
+</div>
+
+<div class="grid-container">
+  <div class="grid-x grid-margin-x">
+    <div class="cell medium-12">
+      <h1>Gatsby.js Tutorials #4 - Building a Blog with Markdown</h1>
+      <p class="lead">Using markdown to create blog posts and GraphQL to pull them in.</p>
+      <p>
+        <a href="https://github.com/leveluptuts/Gatsby-Tutorials/tree/4buildingablog">GitHub Repo</a>
+      </p>
+      <ol>
+        <li>You'll want to bring in a plugin that grabs files and creates nodes and data. In this case, markdown</li>
+        <li>Get the gatsby-source-file plugin because we'll be pulling in files from our file system, not from some sort of external
+          API.
+          <br>
+          <code>npm install --save gatsby-source-filesystem</code>
+        </li>
+        <li>Add it to our plugins array in gatsby-config.js as an object (objects let you include more information)
+          <br>
+          <code>resolve: 'gatsby-source-filesystem', options: { path: `${__dirname}/src/pages`, name: 'pages', }
+          </code>
+        </li>
+        <li>Now we make a
+          <strong>transformer plugin</strong> which takes some kind of data format and transforms it into information that Gatsby
+          can query against
+          <strong>in GraphQL</strong>.
+        </li>
+        <li>Get the transformer plugin
+          <code>npm install --save gatsby-transformer-remark</code>
+        </li>
+        <li>Add it to the plugins in gatsby-config.js
+          <code>'gatsby-transformer-remark'</code>
+        </li>
+        <h3>Let's start making some pages!</h3>
+        <ol>
+          <li>Create a folder in /pages called /[whatever blog post naming convention]
+            <br>
+            <em>gatsby doesn't care how you name things</em>
+            <ul>
+              <li>Inside this folder create a
+                <strong>index.md</strong> file.</li>
+              <li>this will be the content for our blog post.</li>
+              <li>It's just like any other markdown file except:
+                <ul>
+                  <li>you have front matter</li>
+                  <li>give the front a path and title</li>
+                  <li>Add typical markdown below</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ol>
+      </ol>
+      <h3>So the Blog Post is Setup, But a 404 Remains because it's not really a page.</h3>
+      <ol>
+        <li>We'll make a folder called
+          <strong>src/templates</strong>
+        </li>
+        <li>Inside
+          <strong>templates/</strong> we'll create a post.js file
+          <ul>
+            <li>We'll import React and Helmet</li>
+            <li>create an export for the template
+              <ul>
+                <li>where we'll include
+                  <strong>data</strong> that's going to be a prop that will be injected by the GraphQL query. This is where all of
+                  our information is going to come in to be rendered in our template.</li>
+                <li>the data is stored in an object as
+                  <strong>data.markdown.remark</strong> because using remark to pull in our markdown data.</li>
+                <li>Inside the function we'll make a constant
+                  <br>
+                  <code>const {markdownRemark: post} = data;</code>
+                  <br>The above is the equivalent way of doing
+                  <br>
+                  <code>const post = data.markdownRemark;</code>
+                </li>
+                <li>This is a react component so we have to return something
+                  <br>
+                  <code>return (...JSX HTML Template...)</code>
+                </li>
+                <li>Based on the keys in the front matter we can plug the front matter into the template
+                  <code>{post.frontmatter.title}</code>
+                  <ul>
+                    <li>You can have whatever you want in front matter and be able to access it here in the template.</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>In Post JS add an export const function to Query GraphQL</li>
+          </ul>
+        </li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+
+<div class="grid-container">
+  <div class="grid-x grid-margin-x">
+    <div class="cell medium-12">
+      <h1>Gatsby.js Tutorials #5 - Building a Blog w/ Markdown part 2</h1>
+      <ol>
+        <li>We need to register our posts, Gatsby doesn't know that these posts should be pages.</li>
+        <li>Create a
+          <strong>gatsby-node.js</strong> file in the project's root.</li>
+      </ol>
+      <h3>The order of this one</h3>
+      <ol>
+        <li>We imported our file system and transformer remark plugins</li>
+        <li>Then we used those in our
+          <strong>gatsby-config.js</strong>
+        </li>
+        <li>- now we can query one the markdown files</li>
+        <li>Then in
+          <strong>gatsby-node.js</strong> we're actually grabbing all of our pages and using the const
+          <strong>createPage</strong> function from the API.</li>
+        <li>we also bring in the postTemplate</li>
+        <li>run a query to grab every single post</li>
+        <li>that then becomes available as
+          <strong>data</strong>.</li>
+        <li>
+          <strong>res.data.allMarkdownRemark.edges</strong> has all our pages.</li>
+        <li>which we are then iterating over and we're creating them with
+          <ul>
+            <li>a path</li>
+            <li>and a component, which is our template</li>
+          </ul>
+        </li>
+        <li>In the individual template we're
+          <ul>
+            <li>creating a query w/ BlogPostByPath, and grabbing the path</li>
+            <li>and finding a particular markdown file.</li>
+            <li>then we have a react component which is a
+              <strong>functional stateless component</strong>
+            </li>
+            <li>that pulls out a post</li>
+            <li>from data.markdown</li>
+            <li>that returns a div, h1, and a div w/ our post html</li>
+          </ul>
+        </li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+<div class="grid-container">
+  <div class="grid-x grid-margin-x">
+    <div class="cell medium-12">
+      <h1>Gatsby.js Tutorials #6 - Testing Queries w/ GraphiQL</h1>
+      <p>Let's look into how to make an index page.</p>
+      <ol>
+        <li>Access
+          <a href="http://localhost:8000/___graphql" target="_blank">http://localhost:8000/___graphql</a>
+        </li>
+        <li>You'll see that we can't query markdown fields</li>
+        <li>Take a look at our
+          <strong>templates/post.js</strong>
+          <ul>
+            <li></li>
+          </ul>
+        </li>
+        <li>Take a look at our
+          <strong>gatsby-node.js</strong> where we actually queried on allMarkdownRemark</li>
+        <li>We want to grab the that version and stick it in GraphiQL</li>
+        <li>Basically you write your queries in GraphiQL to get them to pass, then you move them to your code.</li>
+
+      </ol>
+      <h3>Publish a new post</h3>
+      <ol>
+        <li>Make a new folder with an index.md file</li>
+        <li>You'll see the new blog post result in GraphiQL :)</li>
+        <li>Hurray it's using our file system!</li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+<div class="grid-container">
+  <div class="grid-x grid-margin-x">
+    <div class="cell medium-12">
+      <h1>Gatsby.js Tutorials #7 - Building an Index Page</h1>
+      <ol>
+        <li>First we're going to want to look at our
+          <strong>post.js</strong>
+          as it's got our query.
+        </li>
+        <li>Next, take a look at the
+          <strong>pages/index.js</strong>
+          where we'll
+          <ol>
+            <li>
+              <code>export const pageQuery = graphql`...`</code>
+            </li>
+            <li>Inside we'll make our page query that grabs all the indexes.
+              <br>
+              <code>query IndexQuery {}</code>
+            </li>
+            <li>We'll copy/paste our allMarkdownRemark from GraphiQL inside the IndexQuery</li>
+            <li>Booya :) Time to start playing w/ React DevTools
+              <br>
+              <em>We'll have all the data we need to build!</em>
+              <ul>
+                <li>Search for
+                  <strong>indexPage</strong>
+                </li>
+                <li>You'll see some props on the side</li>
+                <li>Click on data -> allMarkdownRemark -> edges -> # -> node -> all our stuff!</li>
+              </ul>
+            </li>
+          </ol>
+          <h3>Ok let's start building the index.js page</h3>
+          <ol>
+            <li>Use developer tools to find the data we have access to</li>
+            <li>We just need to get to edges</li>
+            <li>We'll map out all the nodes on index.js
+              <br>
+              <code>{data.allMarkdownRemark.edges.map(...)}</code>
+            </li>
+            <li>Inside ... we'll pass the argument for post
+              <code>post => (...)</code>
+            </li>
+            <li>Add tags and or compoenents</li>
+            <li>Inside post => we'll add an anchor tag</li>
+            <li>for the href= we'll add a
+              <code>{post.node.frontmatter.path}</code>
+              and
+              <code>{post.node.frontmatter.title}</code> inside.
+            </li>
+            <li>
+              <strong>you can have these be components too! (to flesh'm out)</strong>
+            </li>
+          </ol>
+          <p>id Warnings??? - it's ok, graphQL autogenerates an id that we can simply include in our queries, in your pages/index.js
+            file
+            <ul>
+              <li>add
+                <strong>id</strong> to the pageQuery</li>
+              <li>and add the
+                <strong>key={post.node.id}</strong> to the anchor tag</li>
+              <li>
+                <strong>You should change that a tag to a Link tag to keep everything in React</strong>
+              </li>
+            </ul>
+          </p>
+
+        </li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+<div class="grid-container">
+  <div class="grid-x grid-margin-x">
+    <div class="cell medium-12">
+      <h1>Gatsby.js Tutorials #8 - Building Your Static Site</h1>
+      <p class="lead">Let's make a draft system!</p>
+      <h3>First some house keeping</h3>
+      <ul>
+        <li>Remember that this is a static site generator.</li>
+        <li>How do we get this thing to spit out a real website?
+          <ol>
+            <li>Run gatsby build
+              <br>This will compile and generate or site into a production bundle in the public folder
+              <br>You could just throw this thing up online as is</li>
+          </ol>
+
+        </li>
+        <li>Develop in a production mode
+          <code>gatsby serve</code> will let us look at a prod experience
+        </li>
+        <li>View Source, it'll look very... unique.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="grid-container">
+  <div class="grid-x grid-margin-x">
+    <div class="cell medium-12">
+      <h1>Gatsby.js Tutorials #9 - Filtering and Sorting w/ GraphQL</h1>
+      <ol>
+        <li>Add some desired frontmatter to the posts
+          <br>
+          <code>published: true</code>
+        </li>
+        <li>then we add it to the allMarkdownRemark(...) as a filter parameter
+          <br>
+          <code>allMarkdownRemark(published: true) {}</code>
+        </li>
+        <li>under limit add a filter to GraphQL
+          <br>
+          <code>filter: { frontmatter: { published: { eq: true } } }</code>
+        </li>
+        <li>Now go add this line to the query itself on pages/index.js</li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+<div class="grid-container">
+  <div class="grid-x grid-margin-x">
+    <div class="cell medium-12">
+      <h1>Ian Sinnott - Building Static Sites with React</h1>
+      <p>
+        <a href="https://github.com/iansinnott/react-static-presentation">Slides</a>
+      </p>
+      <h2>Wants: How do we know this is a use case?</h2>
+      <p>What static gives you</p>
+      <ul>
+        <li>Indexable by search engine</li>
+        <li>Performant - loads quickly</li>
+        <li>(Relatively)Secure - there's no backend</li>
+        <li>Easily Deployable - no downtime, simple push</li>
+      </ul>
+      <h2>Developer Experience - all checks</h2>
+      <ul>
+        <li>Full power of Javascript - think UI</li>
+        <li>Use existing knowledge - they all have learning curves</li>
+        <li>write once - we just don't know how yet</li>
+        <li>Hot reloading, modularized code, ES6, etc - WEBPACK! - bundles and writes things to disk!</li>
+      </ul>
+      <h3>The process of what we want to do</h3>
+      <ol>
+        <li>we write a plugin</li>
+        <li>that gives you all the routes</li>
+        <li>that then turns those into strings</li>
+        <li>and match them against components</li>
+        <li>and render those all out</li>
+        <li>to static files</li>
+      </ol>
+      <h3>Great... how?</h3>
+      <ol>
+        <li>Turn React Router consig into a list of routes</li>
+        <li>Iterate over that list, match w/ React Router to match those strings</li>
+        <li>Save strings (when we match a string we get a component, get the sting value using React's renderToString methods)
+          then save that string to html files on disk</li>
+        <li>Webpack is super good at writing files, a good combo w/ React Router that enables you to make nested routes</li>
+        <li>see webpack plugin @ iansinnott/react-static-webpack-plugin
+          <ul>
+            <li>turns all your routes into static files</li>
+          </ul>
+        </li>
+      </ol>
+      <h3>So what does it all look like?</h3>
+      <ul>
+        <li>Build front-end app</li>
+        <li>
+          <code>npm run build</code>
+          <p>you get a static site back</p>
+        </li>
+        <li>Deploy full static website to the host of your choice</li>
+
+      </ul>
+      <h3>FYI, Servers are still Cool</h3>
+      <h4>...But Do You Need One?</h4>
+      <ul>
+        <li>The answer used to be a resounding YES</li>
+        <li>But usually they're running content that never changes</li>
+      </ul>
+      <h3>Static Site Use Cases</h3>
+      <ul>
+        <li>Blogs</li>
+        <li>Marketing Websites</li>
+        <li>Documentation</li>
+        <li>Email Signup Pages</li>
+        <li>Contact Forms</li>
+      </ul>
+      <h3>The Static Ecosystem</h3>
+      <ul>
+        <li>Online Form Services</li>
+        <li>Static site hosts</li>
+        <li>Comment Services</li>
+        <li>AWS Lambda + API Gateway(adds endpoints)</li>
+        <li>serverless framework - focused on rich apps w/ server-side functionality</li>
+      </ul>
+      <h2>And this React thing?</h2>
+      <p>Think of the overlap between React and Static</p>
+      <ul>
+        <li>We want to take a component and turn it into an html file</li>
+        <li>Existing tools
+          <ul>
+            <li>ReactDOM - server-side rendering, you're probably doing this, - stringing things back and forth
+              <ul>
+                <li>renderToString</li>
+                <li>renderToStaticMarkup</li>
+              </ul>
+            </li>
+            <li>Node
+              <ul>
+                <li>fs.writeFile</li>
+              </ul>
+            </li>
+            <li>see 13:32, 14:42, for example code</li>
+            <li>We use dangerouslyInnerHTML() because we trust ourselves as the source
+              <ul>
+                <li>see 15:32</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <h2>Multi-page Sites</h2>
+      <h3>Enter React Router</h3>
+      <ul>
+        <li>It does server-side rendering for us.</li>
+        <li>see 19:32</li>
+        <li>describes your client side routes</li>
+        <li>describes nested routes</li>
+        <li>already works on the server</li>
+        <li>see 22:12, 23:27</li>
+        <li>you can build out </li>
+      </ul>
+    </div>
+  </div>
+</div>
